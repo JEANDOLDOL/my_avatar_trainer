@@ -79,7 +79,7 @@ const LoginToggle = ({ onClose }) => {
 
   // 소셜 로그인 버튼 클릭 핸들러
   const handleSocialLogin = (provider) => {
-    const baseURL = `http://localhost:3002/socauth`; // 소셜 로그인 엔드포인트의 베이스 URL
+    const baseURL = `https://techn0.shop/socauth`; // 소셜 로그인 엔드포인트의 베이스 URL
     window.location.href = `${baseURL}/${provider}`;
   }; // 소셜로그인 jwt
 

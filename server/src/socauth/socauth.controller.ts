@@ -61,7 +61,7 @@ export class SocauthController {
           // 소셜 로그인 데이터를 이용해서 회원 가입한다.
           await this.socauthService.signUp(socUserCredentialDto);
           
-          return res.redirect('http://localhost:3000/socauth/additional-data');
+          return res.redirect('https://techn0.shop/socauth/additional-data');
 
         }catch(error){
           console.error('Token verification failed:', error);
@@ -87,7 +87,7 @@ export class SocauthController {
     });
     
     // Redirect to localhost:3000 after successful login
-    return res.redirect('http://localhost:3000');
+    return res.redirect('https://techn0.shop');
   }
 
   @Post('additional-data')
@@ -131,7 +131,7 @@ export class SocauthController {
         path: '/',
       });
       
-      // return res.redirect('http://localhost:3000/')
+      // return res.redirect('https://techn0.shop/')
       return res.status(200).json({message:"Username updated successfully!", redirect:true});
 
     }catch(error){
@@ -189,7 +189,7 @@ export class SocauthController {
         await this.socauthService.signUp(socUserCredentialDto);
 
         
-        return res.redirect('http://localhost:3000/socauth/additional-data');
+        return res.redirect('https://techn0.shop/socauth/additional-data');
 
       }catch(error){
         console.error('Token verification failed:', error);
@@ -211,7 +211,7 @@ export class SocauthController {
     });
 
     // Redirect to localhost:3000 after successful login
-    return res.redirect('http://localhost:3000') 
+    return res.redirect('https://techn0.shop') 
 
   }
 
@@ -263,7 +263,7 @@ export class SocauthController {
       const returnmessage = await this.socauthService.signUp(socUserCredentialDto);
       console.log(returnmessage);
 
-      return res.redirect('http://localhost:3000/socauth/additional-data');
+      return res.redirect('https://techn0.shop/socauth/additional-data');
 
     }catch(error){
       console.error('Token verification failed:', error);
@@ -287,7 +287,7 @@ export class SocauthController {
 
     
     
-    return res.redirect('http://localhost:3000');
+    return res.redirect('https://techn0.shop');
   }
   
 }
